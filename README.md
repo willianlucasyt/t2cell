@@ -16,6 +16,8 @@ t2cell/
 ├── js/
 │   └── main.js         # Interações: menu, scroll reveal, contadores, status de horário
 ├── assets/
+│   │   ├── logo.png       # Logo oficial (fundo transparente)
+│   ├── logo-square.png # Versão quadrada (apple-touch-icon / redes)
 │   └── og-image.svg    # Imagem de compartilhamento (Open Graph)
 └── README.md
 ```

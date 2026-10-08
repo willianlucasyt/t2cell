@@ -1,26 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="T2 Cell Imports">
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2563eb"/>
-      <stop offset="1" stop-color="#22d3ee"/>
+      <stop offset="0" stop-color="#c9942a"/>
+      <stop offset="0.5" stop-color="#e8b53d"/>
+      <stop offset="1" stop-color="#f5cf5b"/>
     </linearGradient>
-    <radialGradient id="glow" cx="78%" cy="18%" r="60%">
-      <stop offset="0" stop-color="#2563eb" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="glow2" cx="12%" cy="90%" r="55%">
-      <stop offset="0" stop-color="#a855f7" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#e8b53d" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e8b53d" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="#0b1020"/>
+  <rect width="1200" height="630" fill="#0a0a0a"/>
   <rect width="1200" height="630" fill="url(#glow)"/>
-  <rect width="1200" height="630" fill="url(#glow2)"/>
-  <g transform="translate(96,210)">
-    <rect width="150" height="150" rx="40" fill="url(#g)"/>
-    <text x="75" y="104" font-family="'Space Grotesk',Arial,sans-serif" font-size="78" font-weight="700" text-anchor="middle" fill="#04121a">T2</text>
+  <g transform="translate(96,205)">
+    <rect width="150" height="150" rx="34" fill="url(#g)"/>
+    <text x="75" y="106" font-family="'Space Grotesk',Arial,sans-serif" font-size="80" font-weight="700" text-anchor="middle" fill="#17120a">T2</text>
   </g>
-  <text x="96" y="430" font-family="'Space Grotesk',Arial,sans-serif" font-size="78" font-weight="700" fill="#eaf0ff">CELL <tspan fill="#22d3ee">IMPORTS</tspan></text>
-  <text x="100" y="498" font-family="Arial,sans-serif" font-size="34" fill="#9fb0d6">Celulares · Importados · Acessórios · Assistência Técnica</text>
-  <text x="100" y="548" font-family="Arial,sans-serif" font-size="30" fill="#22d3ee" font-weight="700">★ 4,9 no Google  ·  Rio Largo/AL  ·  (82) 99395-9533</text>
+  <text x="282" y="300" font-family="'Space Grotesk',Arial,sans-serif" font-size="82" font-weight="700" fill="#f6f3ec">CELL <tspan fill="#e8b53d">IMPORTS</tspan></text>
+  <text x="100" y="470" font-family="Arial,sans-serif" font-size="34" fill="#c3bbaa">Celulares · Importados · Acessórios · Assistência Técnica</text>
+  <text x="100" y="524" font-family="Arial,sans-serif" font-size="30" fill="#e8b53d" font-weight="700">★ 4,9 no Google  ·  Rio Largo/AL  ·  (82) 99395-9533</text>
 </svg>
