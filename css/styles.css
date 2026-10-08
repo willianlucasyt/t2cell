@@ -188,6 +188,17 @@ ul { list-style: none; padding: 0; }
 .about-points li { display: flex; align-items: center; gap: 12px; font-weight: 500; }
 .about-points .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--grad); flex: none; box-shadow: 0 0 10px rgba(232,181,61,.7); }
 
+.about-side { display: grid; gap: 16px; }
+.owner-card { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); background: var(--surface); }
+.owner-photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+.owner-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; transition: transform .6s var(--ease); }
+.owner-card:hover .owner-photo img { transform: scale(1.05); }
+.owner-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.88) 6%, rgba(10,10,10,.1) 46%, transparent 70%); }
+.owner-card figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 18px 20px; display: grid; gap: 3px; }
+.owner-name { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--text); }
+.owner-role { font-size: .92rem; color: var(--brand-2); font-weight: 600; }
+.owner-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); z-index: 2; }
+
 .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .stat {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 20px; text-align: center;
