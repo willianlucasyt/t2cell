@@ -339,11 +339,12 @@ ul { list-style: none; padding: 0; }
 .whats-float {
   position: fixed; right: 18px; bottom: 18px; z-index: 90;
   display: inline-flex; align-items: center; gap: 0; padding: 14px; border-radius: 999px;
-  background: var(--whats); color: #042b14; box-shadow: 0 14px 34px -10px rgba(37,211,102,.7);
+  background: #ffffff; color: #075e54; box-shadow: 0 14px 34px -10px rgba(37,211,102,.7);
   transition: transform .3s var(--ease), padding .3s var(--ease), gap .3s var(--ease);
   animation: floatpulse 2.6s ease-in-out infinite;
 }
-.whats-float svg { width: 30px; height: 30px; flex: none; }
+.whats-float svg { width: 34px; height: 34px; flex: none; }
+.whats-float .whats-logo { display: block; }
 .whats-float-label { max-width: 0; overflow: hidden; white-space: nowrap; font-weight: 700; transition: max-width .35s var(--ease); }
 .whats-float:hover { transform: translateY(-3px); gap: 10px; padding: 14px 20px; }
 .whats-float:hover .whats-float-label { max-width: 160px; }
