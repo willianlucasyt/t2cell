@@ -101,7 +101,8 @@
      tabela, ajuste o objeto HOURS abaixo (24h) para ativar o status automático.
      Formato: { dia: [ [abreMin, fechaMin], ... ] }  (minutos desde 00:00)
      Deixe o array vazio [] para dia fechado. Mantido nulo = status indefinido. */
-  var HOURS = null; // ex.: { 1:[[480,1080]], 2:[[480,1080]], ..., 0:[] }
+  // Seg–Sáb: 08:00–19:00 (480–1140). Dom: 08:00–12:00 (480–720). Sem pausa de almoço.
+  var HOURS = { 1:[[480,1140]], 2:[[480,1140]], 3:[[480,1140]], 4:[[480,1140]], 5:[[480,1140]], 6:[[480,1140]], 0:[[480,720]] };
 
   var now = new Date();
   var todayIdx = now.getDay(); // 0=domingo

@@ -267,6 +267,8 @@ ul { list-style: none; padding: 0; }
 .hours-status.is-open .status-dot { background: var(--whats); box-shadow: 0 0 0 4px rgba(37,211,102,.22); }
 .hours-status.is-closed .status-dot { background: #ff6b6b; box-shadow: 0 0 0 4px rgba(255,107,107,.2); }
 .hours-disclaimer { margin-top: 14px; font-size: .9rem; color: var(--muted); }
+.hours-highlight { margin-top: 18px; padding: 12px 16px; border-radius: 12px; background: var(--grad-soft); border: 1px solid var(--line); color: var(--text); font-size: .98rem; }
+.hours-highlight strong { color: var(--brand-2); }
 .hours-table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
 .hours-table th, .hours-table td { padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--line); }
 .hours-table tr:last-child th, .hours-table tr:last-child td { border-bottom: 0; }

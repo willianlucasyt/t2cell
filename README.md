@@ -79,7 +79,6 @@ Estes pontos estão marcados no código com `[A CONFIRMAR]` e devem ser atualiza
 
 | Item | Onde ajustar | Observação |
 |------|--------------|------------|
-| **Horário de funcionamento** | `index.html` (tabela `.hours-table`) e objeto `HOURS` em `js/main.js` | Preencha os horários reais. Ao definir `HOURS`, o status "Aberto agora / Fechado" passa a funcionar sozinho. |
 | **Depoimentos reais** | `index.html` (seção `#depoimentos`) | Cole avaliações verdadeiras de clientes do Google. **Não** inventar. A nota 4,9 e as 78 avaliações são reais. |
 | **Número exato do endereço** | `index.html` (seção `#localizacao` e JSON-LD) | Fontes divergem entre "nº 09 / Tabuleiro do Pinto" e "Rua da Delegacia, 14". Confirmar o endereço oficial. |
 | **Fotos reais da loja** | `index.html` (seção `#galeria`, blocos `.tile`) | Substituir os blocos de marca por fotos reais da fachada, produtos e atendimento. |
@@ -94,6 +93,7 @@ Estes pontos estão marcados no código com `[A CONFIRMAR]` e devem ser atualiza
 - **Segmento:** Loja de celulares / importados / acessórios + assistência técnica
 - **Endereço:** Conj. Cruzeiro do Sul A1, nº 09 — Tabuleiro do Pinto, Rio Largo/AL, CEP 57100-000 (em frente à antiga delegacia)
 - **Coordenadas:** -9.5343182, -35.8074484
+- **Horário:** Seg–Sáb 08:00–19:00 · Dom 08:00–12:00 (não fecha para almoço)
 - **WhatsApp/Telefone:** (82) 99395-9533
 - **E-mail:** t2cellassistencia@gmail.com
 - **Nota Google:** 4,9 ★ (78 avaliações)
