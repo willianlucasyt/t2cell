@@ -283,13 +283,16 @@ ul { list-style: none; padding: 0; }
 .carousel { position: relative; }
 .carousel-viewport { overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -ms-overflow-style: none; scrollbar-width: none; }
 .carousel-viewport::-webkit-scrollbar { display: none; }
-.carousel-track { display: flex; gap: 18px; padding: 4px; margin: 0; list-style: none; }
+.carousel-track { display: flex; gap: 16px; padding: 4px; margin: 0; list-style: none; }
 .carousel-slide {
-  flex: 0 0 auto; width: clamp(260px, 32%, 360px); scroll-snap-align: center;
-  border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line); background: var(--surface);
-  box-shadow: var(--shadow);
+  flex: 0 0 100%; width: 100%; scroll-snap-align: center;
+  display: grid; place-items: center; padding: 4px;
 }
-.carousel-slide img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.carousel-slide img {
+  width: auto; height: auto; max-width: min(100%, 420px); max-height: 74vh;
+  object-fit: contain; display: block;
+  border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow); background: #0d0d0d;
+}
 .carousel-btn {
   position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
   width: 48px; height: 48px; border-radius: 50%; cursor: pointer;
@@ -307,7 +310,7 @@ ul { list-style: none; padding: 0; }
 }
 .carousel-dots button.active { background: var(--grad); transform: scale(1.25); }
 @media (max-width: 760px) {
-  .carousel-slide { width: 82%; }
+  .carousel-slide img { max-width: 100%; max-height: 70vh; }
   .carousel-btn { width: 42px; height: 42px; font-size: 1.5rem; }
   .carousel-btn.prev { left: 2px; }
   .carousel-btn.next { right: 2px; }
