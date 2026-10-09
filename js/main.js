@@ -122,4 +122,75 @@
       textEl.textContent = "Horário a confirmar";
     }
   }
+
+  /* ---------- Carrossel (álbum de clientes) ---------- */
+  document.querySelectorAll(".carousel").forEach(function (car) {
+    var viewport = car.querySelector(".carousel-viewport");
+    var track = car.querySelector(".carousel-track");
+    var slides = track ? Array.prototype.slice.call(track.children) : [];
+    var prev = car.querySelector(".carousel-btn.prev");
+    var next = car.querySelector(".carousel-btn.next");
+    var dotsWrap = car.querySelector(".carousel-dots");
+    if (!viewport || slides.length === 0) return;
+
+    var step = function () {
+      var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "0") || 0;
+      return slides[0].offsetWidth + gap;
+    };
+
+    // Monta os indicadores (dots)
+    var dots = [];
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", "Foto " + (i + 1));
+        b.addEventListener("click", function () { goTo(i); });
+        dotsWrap.appendChild(b);
+        dots.push(b);
+      });
+    }
+
+    var current = 0;
+    var setActive = function (i) {
+      current = i;
+      dots.forEach(function (d, j) { d.classList.toggle("active", j === i); });
+    };
+    var goTo = function (i) {
+      i = (i + slides.length) % slides.length;
+      viewport.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft, behavior: "smooth" });
+      setActive(i);
+    };
+
+    if (prev) prev.addEventListener("click", function () { goTo(current - 1); });
+    if (next) next.addEventListener("click", function () { goTo(current + 1); });
+
+    // Atualiza o dot ativo conforme o scroll (inclui arrasto/swipe no celular)
+    var raf;
+    viewport.addEventListener("scroll", function () {
+      if (raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        var s = step() || 1;
+        var i = Math.round(viewport.scrollLeft / s);
+        setActive(Math.max(0, Math.min(slides.length - 1, i)));
+      });
+    }, { passive: true });
+
+    // Autoplay
+    var delay = parseInt(car.getAttribute("data-autoplay") || "0", 10);
+    var timer = null;
+    var play = function () {
+      if (!delay) return;
+      stop();
+      timer = setInterval(function () { goTo(current + 1); }, delay);
+    };
+    var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
+    car.addEventListener("mouseenter", stop);
+    car.addEventListener("mouseleave", play);
+    viewport.addEventListener("touchstart", stop, { passive: true });
+
+    setActive(0);
+    play();
+  });
 })();
