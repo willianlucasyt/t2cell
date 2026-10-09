@@ -99,6 +99,11 @@ ul { list-style: none; padding: 0; }
 .btn-whats { background: var(--whats); color: #042b14; box-shadow: 0 12px 30px -12px rgba(37,211,102,.6); }
 .btn-whats:hover { box-shadow: 0 18px 40px -14px rgba(37,211,102,.75); }
 
+/* Botão com a logo oficial do WhatsApp (fundo branco, logo colorida) */
+.btn-wa { background: #ffffff; color: #075e54; box-shadow: 0 12px 30px -12px rgba(37,211,102,.6); }
+.btn-wa:hover { box-shadow: 0 18px 40px -14px rgba(37,211,102,.75); }
+.btn-wa .whats-logo { width: 24px; height: 24px; flex: none; }
+
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 100;
